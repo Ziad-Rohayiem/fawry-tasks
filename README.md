@@ -17,5 +17,4 @@ A lightweight implementation of the grep command written in Bash, designed to se
 git clone https://github.com/Ziad-Rohayiem/fawry-tasks.git
 
 # Make the script executable
-cd mygrep
 chmod +x mygrep.sh
