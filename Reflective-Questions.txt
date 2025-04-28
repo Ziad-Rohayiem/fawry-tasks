@@ -1,0 +1,15 @@
+1. Breakdown of Argument and Option Handling:
+The script expects exactly two positional arguments: the pattern and only 1 filename to search in. It first checks if the number of arguments
+is correct. If not, it prints an error and usage message and exits. If the correct number of arguments is provided, it assigns them to variables
+and runs a simple grep command to search for the term in the file. No options exept for (-n, -v) are parsed, only basic matching is supported.
+It identifeis options by regex matching since I check the arguemnt that start with -*, then after that, the other argument will be assigned to
+the 2 variables: $pattern, $filesame in the non-option argument list.
+
+2. How the Structure Would Change for Regex or -i/-c/-l Support:
+To support options like -i, -c, -l, or full regex patterns, I would restructure the script to use a while loop with getopts for parsing optional flags
+separately from the search term and filename. The options would be stored in a variable and passed to grep dynamically. This would make the script more
+flexible and allow it to handle both different search behaviors and output formats.
+
+3. Hardest Part and Why:
+The hardest part was implementing proper argument validation and error handling to make sure that, the script behaves correctly when too few, too many, 
+or incorrect arguments are provided was tricky because it depends on expecting the user behaviour.
