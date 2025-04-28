@@ -19,5 +19,5 @@ git clone https://github.com/Ziad-Rohayiem/fawry-tasks.git
 # Make the script executable
 chmod +x mygrep.sh
 
-#Usage
+# Usage
 ./mygrep.sh [Options] pattern filename
